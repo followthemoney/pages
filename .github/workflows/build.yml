@@ -39,4 +39,4 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
         env:
-          ALEPH_TAG: ${{ steps.meta.outputs.tags[0] }}
+          ALEPH_TAG: ${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
