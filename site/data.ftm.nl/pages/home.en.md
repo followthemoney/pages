@@ -22,7 +22,7 @@ samples:
       <div className="HomeScreen__feature-block">
         <div className="HomeScreen__feature-block__content">
           <img src="/static/home_datasets.svg" />
-          <p>Easily <b>search across hundreds of datasets</b>, from many different countries and sources.</p>
+          <p>Easily <b>search across multiple datasets</b>, from many different countries and sources.</p>
         </div>
       </div>
       <div className="HomeScreen__feature-block">
@@ -48,10 +48,10 @@ samples:
           <p>The Aleph data platform brings together a vast archive of current and historic databases, documents, leaks and investigations.</p>
         </div>
         <div className="HomeScreen__paragraph">
-          <p>This web of evidence helps journalists at OCCRP, other publications, and across the world, to see connections, find stolen funds, spot political influence, and unveil corruption.</p>
+          <p>This web of evidence helps journalists at FTM to see connections, find stolen funds, spot political influence, and unveil corruption.</p>
         </div>
         <div className="HomeScreen__paragraph">
-          <p>As part of Aleph, we periodically fetch public records from over 230 online sources, and provide a public search access. Accredited journalists can also access an archive of leaked evidence.</p>
+          <p>As part of Aleph, we periodically fetch public records from online sources.</p>
         </div>
         <a className="bp3-button bp3-intent-primary bp3-align-left" href="pages/about"><b>Learn more</b></a>
       </div>
