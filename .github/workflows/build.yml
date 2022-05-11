@@ -1,11 +1,8 @@
 
 name: Publish Docker image
 
-# Hook on new tag pushed
-on:
-  push:
-    tags:        
-      - '*'
+# Hook on push events
+on: [push]
 
 jobs:
   build-and-publish-image:
@@ -31,10 +28,16 @@ jobs:
         with:
           images: ghcr.io/${{ github.repository }}
       
-      - name: Build and push Docker image
+      - name: Build and push Aleph image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
           context: .
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ftmnl/aleph:latest
+
+      - name: Build and push Aleph production UI image
+        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        with:
+          context: ui/.
+          push: true
+          tags: ftmnl/aleph-ui-production:latest

@@ -1,5 +1,3 @@
 
-ARG ALEPH_TAG=3.12.1
-FROM alephdata/aleph:${ALEPH_TAG}
-
+FROM alephdata/aleph:latest
 COPY /site /aleph/site/
