@@ -33,9 +33,7 @@ jobs:
         with:
           context: .
           push: true
-          #tags: ftmnl/pages:latest
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ghcr.io/ftmnl/pages:latest
           # TODO - make sure we can push this image to our aleph repo
           #secrets: |
             #GIT_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }}
