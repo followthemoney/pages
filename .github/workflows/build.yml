@@ -35,8 +35,8 @@ jobs:
           push: true
           tags: ftmnl/pages:latest
           # TODO - make sure we can push this image to our aleph repo
-          secrets: |
-            GIT_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }}
+          #secrets: |
+            #GIT_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }}
 
       #- name: Build and push Aleph production UI image
         #uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
