@@ -40,4 +40,4 @@ jobs:
         with:
           context: ui/.
           push: true
-          tags: ghcr.io/ftmnl/aleph-ui-production:latest
+          tags: ghcr.io/ftmnl/aleph-ui-production:${{ github.sha }}
