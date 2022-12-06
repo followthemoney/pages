@@ -9,14 +9,14 @@ The images will be built of of the `latest` images in the [`alephdata/aleph`](ht
 
 You can build the images manually like so:
 ```
-docker build ui/. -t ghcr.io/ftmnl/aleph-ui-production:latest -t ghcr.io/ftmnl/aleph-ui-production:3.12.4
-docker build . -t ghcr.io/ftmnl/aleph:latest -t ghcr.io/ftmnl/aleph:3.12.4
+docker build ui/. -t ghcr.io/ftmnl/aleph-ui-production:latest -t ghcr.io/ftmnl/aleph-ui-production:3.13.0
+docker build . -t ghcr.io/ftmnl/aleph:latest -t ghcr.io/ftmnl/aleph:3.13.0
 ```
 
 And push them with:
 ```
-docker push ghcr.io/ftmnl/aleph-ui-production:3.12.4
-docker push ghcr.io/ftmnl/aleph:3.12.4
+docker push ghcr.io/ftmnl/aleph-ui-production:3.13.0
+docker push ghcr.io/ftmnl/aleph:3.13.0
 ```
 
 ### TODO - Automatically building from upstream tags
