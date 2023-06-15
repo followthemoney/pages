@@ -4,6 +4,9 @@ on:
   release:
     types: [published]
 
+env:
+  REGISTRY: ghcr.io
+
 jobs:
   build-and-push-aleph:
     runs-on: ubuntu-latest
