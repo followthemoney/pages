@@ -33,6 +33,6 @@ Now there's a github action running that builds and tags the
 `ghcr.io/followthemoney/aleph` and `ghcr.io/followthemoney/aleph-ui-production` images:
 ```
 gh run list
-STATUS  TITLE                                            WORKFLOW  BRANCH  EVENT    ID          ELAPSED  AGE
-✓       2.15.0                                           package   2.15.0  release  1791795172  1m0s     39m
+STATUS  TITLE    WORKFLOW  BRANCH  EVENT    ID          ELAPSED  AGE
+✓       2.15.0   package   2.15.0  release  1791795172  1m0s     39m
 ```
