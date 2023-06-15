@@ -1,3 +1,3 @@
 
-FROM alephdata/aleph-ui-production:latest
+FROM alephdata/aleph-ui-production:3.14.1
 
