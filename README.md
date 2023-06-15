@@ -3,25 +3,36 @@
 
 This repository builds of the main aleph image, and adds our content pages.
 
-The images will be built of of the `latest` images in the [`alephdata/aleph`](https://github.com/alephdata/aleph/) repository.
+The images will be built of of the official Aleph images in the
+[`alephdata/aleph`](https://github.com/alephdata/aleph/) repository.
 
 ### Building
 
-You can build the images manually like so:
+The images are built on publishing a GitHub release. To release a new version,
+update the versions in [`Dockerfile`](`./Dockerfile`) and
+[`ui/Dockerfile`](`./ui/Dockerfile`), commit, and tag the commit:
 ```
-docker build ui/. -t ghcr.io/ftmnl/aleph-ui-production:latest -t ghcr.io/ftmnl/aleph-ui-production:3.13.0
-docker build . -t ghcr.io/ftmnl/aleph:latest -t ghcr.io/ftmnl/aleph:3.13.0
-```
-
-And push them with:
-```
-docker push ghcr.io/ftmnl/aleph-ui-production:3.13.0
-docker push ghcr.io/ftmnl/aleph:3.13.0
+# Commit & tag
+gc -am 'update to version 2.15.0'
+git tag 2.15.0
+git push --tags
 ```
 
-### TODO - Automatically building from upstream tags
+When you've pushed everything, you can create a github release (you can also use
+github.com if you don't want to use the command line utility):
+```
+gh release create 2.15.0
+? Title (optional) 2.15.0
+? Release notes Leave blank
+? Is this a prerelease? No
+? Submit? Publish release
+https://github.com/followthemoney/pages/releases/tag/2.15.0
+```
 
-There used to be a workflow in this repository for building these, using a git
-tag to tag the images. This would be a nice way of doing this, though i couldn't
-immediately think of a way to use the $TAG to build of of the same upstream
-tagged images.
+Now there's a github action running that builds and tags the
+`ghcr.io/followthemoney/aleph` and `ghcr.io/followthemoney/aleph-ui-production` images:
+```
+gh run list
+STATUS  TITLE                                            WORKFLOW  BRANCH  EVENT    ID          ELAPSED  AGE
+✓       2.15.0                                           package   2.15.0  release  1791795172  1m0s     39m
+```
